@@ -1,9 +1,8 @@
 import React from "react";
 import "./ProductCart.css";
 import { useStateValue } from "../../StateProvider";
-
 function ProductCart({ id, title, image, price, rating }) {
-  const [dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   const removeItem = () => {
     dispatch({
