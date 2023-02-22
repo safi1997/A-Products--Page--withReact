@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useStateValue } from "../../StateProvider";
 import Subtotal from "../../Subtotal";
 import ProductCart from "../ProductCard/ProductCart";
@@ -23,9 +24,6 @@ function Checkout() {
             )}
             {basket.map((item) => (
               <ProductCart
-                className="absolute col"
-                key={item.id}
-                item={item}
                 id={item.id}
                 title={item.title}
                 image={item.image}
